@@ -144,8 +144,8 @@ class OpenAIExt {
      * @throws An error when the JSON response contains an error.
      */
     static parseContentDraft(dataString) {
-        const dataPrefix = 'data: ';
-        const doneData = `${dataPrefix}[DONE]`;
+        const dataPrefix = 'data:';
+        const doneData = `${dataPrefix} [DONE]`;
         const isFinal = dataString.includes(doneData);
         const dataJsonLines = dataString
             .split(doneData)
